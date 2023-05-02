@@ -9,7 +9,7 @@ export default function NavBar() {
       </Link>
       <ul>
         <Link to="/about">About</Link>
-        <Link to="/">Vans</Link>
+        <Link to="/vans">Vans</Link>
       </ul>
     </nav>
   );

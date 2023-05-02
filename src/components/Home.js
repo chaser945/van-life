@@ -5,6 +5,7 @@ import mountainVan from "../img/mountain-van.png";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
+
 export default function Home() {
   return (
     <>
