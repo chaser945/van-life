@@ -11,6 +11,7 @@ body {
 img {
   display: block;
   width: 100%;
+  border-radius: 5px;
 }
 
 h1,
@@ -18,8 +19,13 @@ h2 {
   margin: 0;
 }
 
+p{
+  line-height: 1.6;
+}
+
 a {
   text-decoration: none;
+  color: black;
 }
 
 .App {
@@ -27,6 +33,7 @@ a {
 }
 
 /* NAVBAR */
+/* ======= */
 .navbar {
   background-color: #fff7ed;
   padding: 2em 1.5em;
@@ -54,6 +61,7 @@ nav > ul > a {
 }
 
 /* HOME CARD */
+/* ========== */
 
 .home-card {
   background-color: gray;
@@ -79,7 +87,7 @@ nav > ul > a {
 }
 
 /* ABOUT */
-/* ========= */
+/* ========*/
 
 .about-content {
   padding: 2.5em 1.5em;
@@ -99,6 +107,7 @@ nav > ul > a {
 }
 
 /* ABOUT EXPLORE */
+/* ============ */
 
 .about-explore-card {
   margin-top: 3em;
@@ -113,6 +122,87 @@ nav > ul > a {
   border-radius: 10px;
 }
 
+
+/* VANS PAGE */
+/*==========*/
+
+.van-page-content{
+  padding: 2em;
+}
+
+.van-page-heading{
+  text-align: center;
+}
+
+.van-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.van-card{
+  position: relative;
+  cursor: pointer;
+}
+
+.van-img{
+  max-width: 250px;
+}
+
+.van-details{
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+
+.per-day{
+  font-weight: 400;
+}
+
+.van-type{
+  text-transform: capitalize;
+  color: white;
+  padding: .5em 1em;
+  display: inline;
+  position: absolute;
+  bottom: 5px;
+  border-radius: 5px;
+  font-size: .8rem;
+}
+
+
+/* VANS DETAILS */
+/* ============= */
+
+.van-detail-card{
+  padding: 2em;
+}
+
+.van-details-btn{
+  margin-bottom: 1em;
+  color: black;
+  font-weight: 400;
+}
+
+.van-details-type{
+  text-transform: capitalize;
+  padding: 1em 2em;
+  display: inline-block;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: white;
+  border-radius: 5px;
+}
+
+.vd-btn{
+  margin: 0.5em 0em 2em 0em;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -122,4 +212,12 @@ footer {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
+}
+
+
+/* CUSTOM CLASSES */
+/* =========== */
+
+.custom-border{
+  border: 1px solid black;
 }
