@@ -8,7 +8,7 @@ import Footer from "./Footer";
 export default function About() {
   return (
     <>
-      <NavBar />
+
       <div className="about-card">
         <img src={vanImg} alt="a person on van"></img>
         <div className="about-content">
@@ -37,7 +37,6 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

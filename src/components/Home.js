@@ -9,7 +9,6 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <>
-      <NavBar />
       <div
         style={{ backgroundImage: `url(${mountainVan})` }}
         className="home-card"
@@ -23,7 +22,6 @@ export default function Home() {
         </p>
         <button className="btn home-btn">Find your van</button>
       </div>
-      <Footer />
     </>
   );
 }

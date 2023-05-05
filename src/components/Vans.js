@@ -44,14 +44,12 @@ export default function Vans() {
 
     return (
         <>
-            <NavBar />
             <div className='van-page-content' >
                 <h1 className='van-page-heading' >Explore our vans.</h1>
                 <div className='van-gallery' >
                     {vansCompo}
                 </div>
             </div>
-
         </>
 
     )

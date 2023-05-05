@@ -1,16 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+
+const currentStyle = {
+  textDecoration: 'underline',
+  color: 'black',
+}
 
 export default function NavBar() {
+
+  
+
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
         #vanlife
       </Link>
       <ul>
-        <Link to="/about">About</Link>
-        <Link to="/vans">Vans</Link>
+        <NavLink
+          to="/host"
+          style={({ isActive }) => isActive ? currentStyle : null}
+        >Host</NavLink>
+        <NavLink
+          to="/about"
+          style={({ isActive }) => isActive ? currentStyle : null}
+        >About</NavLink>
+        <NavLink
+          to="/vans"
+          style={({ isActive }) => isActive ? currentStyle : null}
+        >Vans</NavLink>
       </ul>
     </nav>
   );
 }
+
+export {currentStyle}

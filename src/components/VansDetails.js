@@ -38,10 +38,7 @@ export default function VansDetails() {
 
     return (
         <>
-            <NavBar />
-
-
-
+      
             {vans ? (
                 <div className="van-detail-card" >
                     <Link to="/vans"><button className="btn van-details-btn" > ← Go back to vans page</button></Link>
@@ -57,7 +54,6 @@ export default function VansDetails() {
             </div>}
 
 
-            <Footer />
         </>
 
 
