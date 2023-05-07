@@ -220,16 +220,18 @@ nav > ul > a {
 
 .host-van-nav >ul {
   margin: 0;
+  padding-bottom: 2em;
 }
 
 .listed-vans-h1{
-  margin-top: 0.5em;
+
+  margin: 0;
   margin-bottom: 1em;
 }
 
 .host-van-wrapper{
   background-color: var(--accent);
-  padding: 1em;
+  padding: 0em 1em 1em 1em;
 }
 
 .host-van-card{
@@ -260,6 +262,43 @@ nav > ul > a {
   margin: 0;
 }
 
+/* HOST VANS LIST NESTING === VAN INFO */
+.host-van-card-info{
+  display: flex;
+  gap: 1.5em;
+}
+
+.host-van-img-info{
+  max-width: 200px;
+}
+
+.host-van-content-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.host-van-type-info{
+  color: white;
+  text-transform: capitalize;
+  padding: .8em 1.5em;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 1em;
+}
+
+.host-van-name-info,
+.host-van-price-info{
+  margin: 0;
+}
+
+.host-van-name-info{
+  margin-bottom: 0.5em
+}
+
+.host-van-card-info{
+  padding: 2em;
+}
 
 
 /* FOOTER */

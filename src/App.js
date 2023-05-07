@@ -13,6 +13,8 @@ import Income from "./components/Host/Income";
 import Reviews from "./components/Host/Reviews";
 import HostVans from "./components/Host/HostVans";
 
+import HostVansLayout from "./layouts/HostVansLayout";
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -26,12 +28,14 @@ export default function App() {
             <Route path="about" element={<About />} />
             <Route path="vans" element={<Vans />} />
             <Route path="vans/:id" element={<VansDetails />} />
-
             <Route path="host" element={<HostLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="income" element={<Income />} />
               <Route path="reviews" element={<Reviews />} />
               <Route path="hostvans" element={<HostVans />} />
+              <Route path="hostvans/:id" element={<HostVansLayout />}>
+
+              </Route>
             </Route>
 
 

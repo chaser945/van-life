@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { vansData } from "../../vanData";
 
@@ -24,13 +25,16 @@ export default function HostVans() {
         if (vansArr.length > 0) {
             setVansHtml(vansArr.map(van => {
                 return (
-                    <div className="host-van-card" >
-                        <img className="host-van-img" src={van.imageUrl} ></img>
-                        <div className="host-van-content" >
-                            <h3 className="host-van-name">{van.name}</h3>
-                            <p className="host-van-price">${van.price}/day</p>
+                    <Link to={`/host/hostvans/${van.id}`}>
+                        <div className="host-van-card" >
+                            <img className="host-van-img" src={van.imageUrl} ></img>
+                            <div className="host-van-content" >
+                                <h3 className="host-van-name">{van.name}</h3>
+                                <p className="host-van-price">${van.price}/day</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
+
                 )
             }))
         }
