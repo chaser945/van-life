@@ -25,7 +25,7 @@ export default function HostVans() {
         if (vansArr.length > 0) {
             setVansHtml(vansArr.map(van => {
                 return (
-                    <Link to={`/host/hostvans/${van.id}`}>
+                    <Link to={`/host/hostvans/${van.id}`} key={van.id}>
                         <div className="host-van-card" >
                             <img className="host-van-img" src={van.imageUrl} ></img>
                             <div className="host-van-content" >

@@ -30,7 +30,7 @@ export default function Vans() {
 
             return (
                 <div className='van-card' key={van.id}>
-                    <Link to={`/vans/${van.id}`} state={{ search: searchParams }}>
+                    <Link to={`/vans/${van.id}`} state={{ search: searchParams, type: filterType }}>
                         <img className='van-img' src={van.imageUrl} alt={van.name} ></img>
                         <h4 className='van-details' ><span className='van-name'>{van.name}</span> <span className='van-price' >{van.price}$<br></br><small className='per-day' >/day</small></span></h4>
                         <div className='van-type' style={{
