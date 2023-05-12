@@ -14,6 +14,9 @@ import Reviews from "./components/Host/Reviews";
 import HostVans from "./components/Host/HostVans";
 
 import HostVansLayout from "./layouts/HostVansLayout";
+import Details from "./components/HostVans/Details";
+import Pricing from "./components/HostVans/Pricing";
+import Photos from "./components/HostVans/Photos";
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -34,7 +37,9 @@ export default function App() {
               <Route path="reviews" element={<Reviews />} />
               <Route path="hostvans" element={<HostVans />} />
               <Route path="hostvans/:id" element={<HostVansLayout />}>
-
+                <Route index element={<Details />} />
+                <Route path="pricing" element={<Pricing />} />
+                <Route path="photos" element={<Photos />} />
               </Route>
             </Route>
 

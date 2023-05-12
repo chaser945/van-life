@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  background-color: var(--accent);
 }
 
 img {
@@ -30,6 +31,24 @@ p{
 a {
   text-decoration: none;
   color: black;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.light-text{
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.back-btn{
+  background-color: var(--accent);
+  border: none;
+  font-family: inherit;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .App {
@@ -132,10 +151,43 @@ nav > ul > a {
 
 .van-page-content{
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .van-page-heading{
   text-align: center;
+}
+
+.vans-buttons-wrapper{
+  margin-top: 1em;
+  display: flex;
+  gap: 2em;
+}
+
+
+.van-page-btn{
+  border: none;
+  background-color: #FFEAD0;
+  font-family: inherit;
+  padding: 1em 2em;
+  border-radius: 10px;
+  color: #4D4D4D;
+  cursor: pointer;
+}
+
+.clear-btn{
+  border: none;
+  background-color: var(--accent);
+  color:#4D4D4D;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.van-page-btn:hover,
+.clear-btn:hover{
+  text-decoration: underline;
 }
 
 .van-gallery{
@@ -187,9 +239,9 @@ nav > ul > a {
 }
 
 .van-details-btn{
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: black;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .van-details-type{
@@ -216,6 +268,12 @@ nav > ul > a {
 
 .host-van-nav{
   background-color: var(--accent);
+}
+
+.host-vans-btn{
+  color: black;
+  margin-top: 2em;
+  margin-left: 2.5em;
 }
 
 .host-van-nav >ul {
@@ -263,6 +321,13 @@ nav > ul > a {
 }
 
 /* HOST VANS LIST NESTING === VAN INFO */
+
+.host-vans-container{
+  margin: 2em;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .host-van-card-info{
   display: flex;
   gap: 1.5em;
@@ -301,6 +366,39 @@ nav > ul > a {
 }
 
 
+/*========== HOST VAN==========
+1) DETAILS 
+*/
+
+.host-van-details-wrapper{
+  padding: 0.5em 1em 1em 2.5em;
+}
+
+.host-van-details-category{
+  text-transform: capitalize;
+}
+
+/*========== HOST VAN==========
+1) Pricing 
+*/
+
+.host-van-pricing-wrapper{
+  padding: 1em 1em 2em 2.5em;
+}
+
+/*========== HOST VAN==========
+1) Photos 
+*/
+
+.host-van-photos-wrapper{
+  padding: 2em;
+}
+
+.host-van-photos-img{
+  max-width: 100px;
+}
+
+
 /* FOOTER */
 
 footer {
@@ -313,3 +411,19 @@ footer {
 }
 
 
+/* vans btn custom classes */
+
+.selected-simple{
+  background-color: #E17654 ;
+  color: white;
+}
+
+.selected-luxury{
+  background-color: #161616;
+  color: white;
+}
+
+.selected-rugged{
+  background-color: #115E59;
+  color: white;
+}

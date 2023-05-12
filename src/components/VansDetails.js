@@ -1,12 +1,12 @@
 import React from "react";
 
-import NavBar from "./NavBar";
-import Footer from "./Footer";
 import { vansData } from "../vanData";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
 export default function VansDetails() {
+
+    const location = useLocation()
+    console.log(location.state.search.toString())
 
     const param = useParams()
     const index = param.id - 1
@@ -41,7 +41,7 @@ export default function VansDetails() {
 
             {vans ? (
                 <div className="van-detail-card" >
-                    <Link to="/vans"><button className="btn van-details-btn" > ← Go back to vans page</button></Link>
+                    <Link to={`..?${location.state.search.toString()}`} relative="path"><div className="van-details-btn"><span>&larr;</span><button className="back-btn">Go back to vans page</button></div></Link>
                     <img src={vans[index].imageUrl} alt={vans[index].name} ></img>
                     <span style={{ backgroundColor: vanColor }} className="van-details-type" >{vans[index].type}</span>
                     <h1>{vans[index].name}</h1>
